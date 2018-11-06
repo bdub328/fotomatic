@@ -44,6 +44,8 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 1;
+
 }
 
 header .content {
@@ -56,13 +58,14 @@ header .content {
 
 header .logo {
   flex: 1;
-  align-items: flex-start;
+
 
 }
 
 header nav ul {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 nav li {
@@ -81,7 +84,7 @@ header .icon {
 }
 
 
-/* Different Headers*/
+/* Header - Different Screens*/
 
 
 /* Header - PC*/
@@ -110,7 +113,6 @@ header .tablet {
   header .tablet {
 
   }
-
   }
 
 /* Header - Mobile*/
@@ -161,22 +163,35 @@ header .tablet {
 
 /* Main Content ? */
 
-@media only screen and (max-width: 760px) {
+@media only screen and (min-width: 760px) {
   .main-content {
-    top: 2.5625rem;
+position: relative;
+top: 5.3rem;
+
   }
 }
 
+
 /* Sign Up Section */
 
+
+@media only screen and (min-width: 760px) {
 #sign-up-section {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url("https://bdub328.github.io/fotomatic/resources/images/banner-landingpage.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+
+
 #sign-up-cta {
+  margin-top: 170px;
+  margin-left: 100px;
   padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
@@ -216,6 +231,8 @@ header .tablet {
 #sign-up-cta .button {
   margin-top: 1.625rem;
   padding: 1.25rem 7.25rem;
+}
+
 }
 
 @media only screen and (max-width: 760px) {
