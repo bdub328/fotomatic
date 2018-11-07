@@ -7,7 +7,7 @@ html {
 
 .main-content {
   position: relative;
-  top: 5.3125rem; /* To offset for fixed header. */
+   /* To offset for fixed header. */
 }
 
 .center {
@@ -52,7 +52,7 @@ header .content {
   display: flex;
   align-items: center;
   padding: 1.875rem;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.6px;
 }
 
@@ -85,8 +85,6 @@ header .icon {
 
 
 /* Header - Different Screens*/
-
-
 /* Header - PC*/
 
 @media only screen and (min-width: 760px) {
@@ -111,7 +109,7 @@ header .tablet {
   }
 
   header .tablet {
-
+ font-size: 12px;
   }
   }
 
@@ -124,7 +122,6 @@ header .tablet {
     header .tablet {
       display: none;
     }
-
 
   header .mobile {
     display: block;
@@ -172,8 +169,8 @@ top: 5.3rem;
 }
 
 
-/* Sign Up Section */
-
+/* Sign Up Sections */
+/* Sign Up Sections - PC */
 
 @media only screen and (min-width: 760px) {
 #sign-up-section {
@@ -185,8 +182,9 @@ top: 5.3rem;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-}
+  max-width: 100%;
 
+}
 
 
 #sign-up-cta {
@@ -235,11 +233,26 @@ top: 5.3rem;
 
 }
 
-@media only screen and (max-width: 760px) {
+
+/* SignUp - Tablet*/
+@media only screen and (min-width: 631px) and (max-width: 759px) {
+
+
+  .header {
+    display: block;
+
+  }
+
   #sign-up-section {
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 28rem;
+    background-image: url("https://bdub328.github.io/fotomatic/resources/images/banner-landingpage.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
   }
 
   #sign-up-cta {
@@ -265,11 +278,36 @@ top: 5.3rem;
   #sign-up-cta h2 {
     font-size: 2.25rem;
   }
+
+  #sign-up-cta .cursive {
+    font-family: "Damion", cursive;
+  }
+
+  #sign-up-cta .striking {
+    font-family: "Rubik", sans-serif;
+    padding-bottom: .75rem;
+  }
 }
 
-@media only screen and (max-width: 450px) {
+
+/* Signup Section - Mobile*/
+@media only screen and (max-width: 630px) {
+
   #sign-up-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 20rem;
+    background-image: url("https://bdub328.github.io/fotomatic/resources/images/banner-landingpage.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+
+  }
+
+  #sign-up-cta .email {
+    display: none;
   }
 
   #sign-up-cta h1 {
@@ -279,7 +317,19 @@ top: 5.3rem;
   #sign-up-cta h2 {
     font-size: 2rem;
   }
+
+  #sign-up-cta .cursive {
+    font-family: "Damion", cursive;
+  }
+
+  #sign-up-cta .striking {
+    font-family: "Rubik", sans-serif;
+    padding-bottom: .75rem;
+  }
 }
+
+
+
 
 /* Features Section */
 
@@ -303,9 +353,21 @@ top: 5.3rem;
   margin: 0 auto;
 }
 
+.content {
+  padding: 2.5rem;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+
+}
+
 .feature h2 {
+  font-family: Roboto;
+  line-height: 1;
   padding-bottom: .5rem;
-  font-size: 2.25rem;
+  font-size: 36px;
   font-weight: bold;
   color: #4a4a4a;
 }
@@ -370,7 +432,15 @@ top: 5.3rem;
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
 }
+
+#filters-section .image-container img{
+  width: 100%;
+}
+
 
 @media only screen and (max-width: 760px) {
   #filters-section {
@@ -408,11 +478,11 @@ top: 5.3rem;
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -421,12 +491,12 @@ top: 5.3rem;
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
@@ -435,7 +505,7 @@ top: 5.3rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
@@ -446,7 +516,8 @@ top: 5.3rem;
 
 footer {
   background-color: #9b9b9b;
-  padding: 1.5rem 2rem;
+  padding: 0 2rem;
+
 }
 
 footer .content {
